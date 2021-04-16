@@ -4,8 +4,8 @@ import Button from '.'
 
 describe('<Button />', () => {
   it('should render the button', () => {
-    render(<Button />)
+    render(<Button>CARRINHO</Button>)
 
-    expect(screen.getByRole('button', { name: /snack shop/i }))
+    expect(screen.getByRole('button', { name: /carrinho/i }))
   })
 })
