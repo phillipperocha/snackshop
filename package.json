@@ -1,5 +1,5 @@
 {
-  "name": "snackstore-client",
+  "name": "snackshop",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -29,12 +29,18 @@
     }
   },
   "lint-staged": {
-    "src/**/*": "yarn lint --fix"
+    "src/**/*": ["yarn lint --fix", "yarn test --findRelatedTests --bail"]
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": ["<rootDir>/src/**/*.ts(x)?", "!<rootDir>/src/**/stories.tsx"],
+    "testMatch": [
+      "<rootDir>/src/**/test.ts(x)?"
     ]
   },
   "browserslist": {
