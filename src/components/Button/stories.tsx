@@ -11,8 +11,12 @@ export default {
   },
 } as Meta
 
-export const Default: Story = (args) => <Button {...args} />
+export const Default: Story = (args) => (
+  <div style={{ width: '42.5rem' }}>
+    <Button {...args} />
+  </div>
+)
 
 Default.args = {
-  children: 'Buy now',
+  children: 'Carrinho',
 }
