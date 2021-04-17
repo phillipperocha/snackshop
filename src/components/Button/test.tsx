@@ -10,7 +10,7 @@ describe('<Button />', () => {
     const { container } = renderWithTheme(<Button>CARRINHO</Button>)
 
     expect(screen.getByRole('button', { name: /carrinho/i })).toHaveStyle({
-      height: '61px',
+      height: '6.1rem',
       color: theme.colors.white,
       background: theme.colors.primary,
     })

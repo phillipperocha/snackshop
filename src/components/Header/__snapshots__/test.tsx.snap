@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should render the default header correctly 1`] = `
+.c0 {
+  padding-top: 0;
+  background: #FF0000;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 6.3rem;
+  padding: 2.0rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 svg {
+  cursor: pointer;
+  margin-right: 1.0rem;
+}
+
+.c1 h3 {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.8rem;
+  display: inline;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <h3>
+      Carrinho
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`<Header /> should render the header with banner 1`] = `
+.c0 {
+  padding-top: 0;
+  background: #FF0000;
+  padding-top: 5px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url('/img/bannerBackground.svg');
+  background-size: cover;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 2.0rem;
+  gap: 1.0rem;
+  min-height: 10.6rem;
+}
+
+.c1 span {
+  font-size: 2.0rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 11.4rem;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-left: -2.0rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 6.3rem;
+  padding: 2.0rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 svg {
+  cursor: pointer;
+  margin-right: 1.0rem;
+}
+
+.c3 h3 {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.8rem;
+  display: inline;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <img
+        alt="Imagem de coxinhas"
+        src="/img/coxinha.png"
+      />
+    </div>
+    <span>
+      Promoção de coxinha
+    </span>
+  </div>
+  <div
+    class="c3"
+  >
+    <h3>
+      Monte seu cento de salgado (1, 2 ou 4 opções)
+    </h3>
+  </div>
+</div>
+`;

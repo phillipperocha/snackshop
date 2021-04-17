@@ -35,11 +35,17 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
   ${({ theme }) => css`
+    html {
+      font-size: 62.5%;
+    }
+
     body {
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
       overflow-x: hidden;
+      line-height: 1.3;
     }
   `}
 

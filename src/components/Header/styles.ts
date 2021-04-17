@@ -1,22 +1,12 @@
 import styled, { css } from 'styled-components'
+import { HeaderProps } from '.'
 
-type WrapperProps = { hasIcon: boolean }
-
-const wrapperModifiers = {
-  withIcon: () => css`
-    svg {
-      width: 20px;
-
-      & + span {
-        margin-left: 10px;
-      }
-    }
-  `,
-}
-
+type WrapperProps = { hasBanner: boolean }
 export const Wrapper = styled.div<WrapperProps>`
-  ${({ hasIcon }) => css`
-    ${!!hasIcon && wrapperModifiers.withIcon()};
+  ${({ theme, hasBanner }) => css`
+    padding-top: 0;
+    background: ${theme.colors.primary};
+    ${hasBanner && { paddingTop: '5px' }}
   `}
 `
 
@@ -25,45 +15,43 @@ export const Banner = styled.div`
     display: flex;
     background-image: url('/img/bannerBackground.svg');
     background-size: cover;
-    width: 100%;
-    border-top: 5px solid ${theme.colors.primary};
-    height: 111px;
     align-items: center;
-    font-size: 20px;
-    justify-content: space-between;
+    padding: 0 ${theme.spacings.xsmall};
+    gap: ${theme.spacings.xxsmall};
+    min-height: 10.6rem;
 
     span {
-      font-family: ${theme.font.family};
-      text-align: left;
-      margin-left: 10px;
-      padding-right: 20px;
-      min-width: 278px;
-      width: 100%;
+      font-size: ${theme.font.sizes.xlarge};
     }
   `}
 `
 
 export const BannerImage = styled.div`
-  min-width: 100px;
-  width: 168px;
-  max-height: 106px;
-  padding: 2px 0 2px 0;
-  height: 100%;
-  background-image: url('/img/coxinha.png');
-  background-position: right;
-  background-repeat: no-repeat;
+  ${({ theme }) => css`
+    display: flex;
+    width: 11.4rem;
+    justify-content: flex-end;
+    margin-left: -${theme.spacings.xsmall};
+  `}
 `
 
 export const HeaderText = styled.div`
   ${({ theme }) => css`
     display: flex;
-    background: ${theme.colors.primary};
-    font-size: 18px;
-    font-weight: bold;
-    color: ${theme.colors.white};
-    height: 63px;
-    align-items: center;
-    justify-content: left;
+    min-height: 6.3rem;
     padding: ${theme.spacings.xsmall};
+    align-items: center;
+
+    svg {
+      cursor: pointer;
+      margin-right: ${theme.spacings.xxsmall};
+    }
+
+    h3 {
+      color: ${theme.colors.white};
+      font-weight: bold;
+      font-size: ${theme.font.sizes.large};
+      display: inline;
+    }
   `}
 `

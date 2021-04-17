@@ -13,9 +13,9 @@ export const Wrapper = styled.button`
     text-decoration: none;
     align-items: center;
     justify-content: center;
-    height: 61px;
+    height: 6.1rem;
     width: 100%;
     text-transform: uppercase;
-    padding: 8px;
+    padding: 0.8rem;
   `}
 `
