@@ -12,7 +12,7 @@ export default {
 } as Meta
 
 export const Default: Story = (args) => (
-  <div style={{ width: '42.5rem' }}>
+  <div style={{ maxWidth: '42.5rem', width: '100%' }}>
     <Button {...args} />
   </div>
 )
