@@ -16,7 +16,7 @@ export default {
 } as Meta
 
 export const Default: Story = ({ children, ...args }) => (
-  <div style={{ maxWidth: '450px' }}>
+  <div style={{ minWidth: '418px' }}>
     <Header {...args}>{children}</Header>
   </div>
 )
@@ -26,7 +26,7 @@ Default.args = {
 }
 
 export const WithBanner: Story = ({ children, ...args }) => (
-  <div style={{ maxWidth: '450px' }}>
+  <div style={{ minWidth: '418px' }}>
     <Header {...args}>{children}</Header>
   </div>
 )

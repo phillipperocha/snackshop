@@ -4,8 +4,11 @@ export default {
   },
   font: {
     family: "'Roboto', sans-serif",
-    normal: 400,
-    bold: 700,
+    weight: {
+      normal: 400,
+      bold: 700,
+      black: 900,
+    },
     sizes: {
       small: '14px',
       medium: '16px',

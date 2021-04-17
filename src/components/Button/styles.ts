@@ -5,7 +5,7 @@ export const Wrapper = styled.button`
     background: ${theme.colors.primary};
     font-family: ${theme.font.family};
     font-size: ${theme.font.sizes.xlarge};
-    font-weight: 800;
+    font-weight: ${theme.font.weight.black};
     color: ${theme.colors.white};
     cursor: pointer;
     border: none;
