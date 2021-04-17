@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import { HeaderProps } from '.'
 
 type WrapperProps = { hasBanner: boolean }
 export const Wrapper = styled.div<WrapperProps>`
