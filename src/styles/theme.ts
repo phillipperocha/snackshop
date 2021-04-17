@@ -7,11 +7,11 @@ export default {
     normal: 400,
     bold: 700,
     sizes: {
-      small: '1.4rem',
-      medium: '1.6rem',
-      large: '1.8rem',
-      xlarge: '2.0rem',
-      xxlarge: '3.0rem',
+      small: '14px',
+      medium: '16px',
+      large: '18px',
+      xlarge: '20px',
+      xxlarge: '30px',
     },
   },
   colors: {
@@ -24,8 +24,8 @@ export default {
     darkGray: '#707070',
   },
   spacings: {
-    xsmall: '2.0rem',
-    small: '2.4rem',
-    medium: '3.5rem',
+    xsmall: '20px',
+    small: '24px',
+    medium: '35px',
   },
 }

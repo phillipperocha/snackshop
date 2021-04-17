@@ -5,7 +5,6 @@ export type HeaderProps = {
   children: React.ReactNode
   withBanner?: boolean
   bannerText?: React.ReactNode
-  bannerImage?: string
 }
 
 const Header = ({
@@ -17,10 +16,13 @@ const Header = ({
   <S.Wrapper hasIcon={!!icon}>
     {withBanner && bannerText && (
       <S.Banner>
+        <S.BannerImage />
         <span>{bannerText}</span>
       </S.Banner>
     )}
-    <S.HeaderText>{children}</S.HeaderText>
+    <S.HeaderText>
+      <p>{children}</p>
+    </S.HeaderText>
   </S.Wrapper>
 )
 

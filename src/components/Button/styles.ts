@@ -16,6 +16,6 @@ export const Wrapper = styled.button`
     height: 61px;
     width: 100%;
     text-transform: uppercase;
-    padding: 0.8rem;
+    padding: 8px;
   `}
 `

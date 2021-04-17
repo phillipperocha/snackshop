@@ -16,7 +16,9 @@ export default {
 } as Meta
 
 export const Default: Story = ({ children, ...args }) => (
-  <Header {...args}>{children}</Header>
+  <div style={{ maxWidth: '450px' }}>
+    <Header {...args}>{children}</Header>
+  </div>
 )
 
 Default.args = {
@@ -24,16 +26,18 @@ Default.args = {
 }
 
 export const WithBanner: Story = ({ children, ...args }) => (
-  <Header {...args}>{children}</Header>
+  <div style={{ maxWidth: '450px' }}>
+    <Header {...args}>{children}</Header>
+  </div>
 )
 
 WithBanner.args = {
   children: 'Monte seu cento de salgado (1, 2 ou 4 opções)',
   withBanner: true,
   bannerText: (
-    <span>
+    <>
       ESCOLHEU <strong>COXINHA</strong> GANHOU DESCONTO DE <strong>10%</strong>{' '}
       NO SEU CENTO DE SALGADOS
-    </span>
+    </>
   ),
 }
