@@ -3,8 +3,7 @@ export default {
     radius: '5px',
   },
   font: {
-    family:
-      "Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    family: "'Roboto', sans-serif",
     normal: 400,
     bold: 700,
     sizes: {
