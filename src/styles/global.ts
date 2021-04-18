@@ -28,6 +28,24 @@ const GlobalStyles = createGlobalStyle`
         url('/fonts/roboto-v27-latin-900.woff') format('woff');
   }
 
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('/fonts/open-sans-v18-latin-regular.woff2') format('woff2'),
+        url('/fonts/open-sans-v18-latin-regular.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('/fonts/open-sans-v18-latin-700.woff2') format('woff2'),
+        url('/fonts/open-sans-v18-latin-700.woff') format('woff');
+  }
+
   * {
     margin: 0;
     padding: 0;

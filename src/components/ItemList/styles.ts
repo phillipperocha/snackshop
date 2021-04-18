@@ -10,7 +10,7 @@ export const Wrapper = styled.ul`
       border: solid 0.5px ${theme.colors.lightGray};
       border-top: none;
       width: 100%;
-      height: 7.9rem;
+      height: 8rem;
       align-items: center;
     }
   `}
