@@ -5,10 +5,14 @@ import Routes from './router'
 import GlobalStyles from 'styles/global'
 import theme from 'styles/theme'
 
+import { CartProvider } from 'hooks/cart'
+
 const App = () => (
   <Router>
     <ThemeProvider theme={theme}>
-      <Routes />
+      <CartProvider>
+        <Routes />
+      </CartProvider>
       <GlobalStyles />
     </ThemeProvider>
   </Router>

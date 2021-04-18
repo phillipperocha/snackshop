@@ -3,60 +3,70 @@ import * as S from './styles'
 import Header from 'components/Header'
 import ItemList from 'components/ItemList'
 
-const cartItems = ['Coxinha', 'Pastel de carne', 'Pastel de queijo', 'Esfirra']
-const hundredPrice = 49.9
+import { CartContext } from 'hooks/cart'
+import { useContext } from 'react'
 
-const CartCheckout = () => (
-  <S.Wrapper>
-    <Header returnHref="/">Carrinho</Header>
+const CartCheckout = () => {
+  const {
+    cartItems,
+    amountEachItem,
+    discount,
+    pricePerHundred,
+    finalPrice,
+  } = useContext(CartContext)
 
-    <S.ListTitle>Resumo do Cento de Salgado</S.ListTitle>
-    <ItemList>
-      {cartItems.map((item) => (
-        <S.ListItem key={item}>
-          <span className="product">{item}</span>
-          <span className="quantity">{100 / cartItems.length}und</span>
-        </S.ListItem>
-      ))}
-    </ItemList>
+  return (
+    <S.Wrapper>
+      <Header returnHref="/">Carrinho</Header>
 
-    <S.Footer>
-      {cartItems.includes('Coxinha') && (
-        <S.DiscountBox>
-          <S.DetailLine>
-            Subtotal
-            <span>
-              R$
-              {hundredPrice.toLocaleString('pt-BR', {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })}
-            </span>
-          </S.DetailLine>
-          <S.DetailLine>
-            Desconto
-            <span>
-              R$
-              {(hundredPrice * 0.1).toLocaleString('pt-BR', {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })}
-            </span>
-          </S.DetailLine>
-        </S.DiscountBox>
-      )}
-      <S.ReviewPriceBox>
-        <p>Total</p>
-        <span>
-          R$
-          {(hundredPrice * 0.9).toLocaleString('pt-BR', {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2,
-          })}
-        </span>
-      </S.ReviewPriceBox>
-    </S.Footer>
-  </S.Wrapper>
-)
+      <S.ListTitle>Resumo do Cento de Salgado</S.ListTitle>
+      <ItemList>
+        {cartItems.map(({ name }) => (
+          <S.ListItem key={name}>
+            <span className="product">{name}</span>
+            <span className="quantity">{amountEachItem}und</span>
+          </S.ListItem>
+        ))}
+      </ItemList>
+
+      <S.Footer>
+        {!!discount && (
+          <S.DiscountBox>
+            <S.DetailLine>
+              Subtotal
+              <span>
+                R$
+                {pricePerHundred.toLocaleString('pt-BR', {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
+              </span>
+            </S.DetailLine>
+            <S.DetailLine>
+              Desconto
+              <span>
+                R$
+                {discount.toLocaleString('pt-BR', {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
+              </span>
+            </S.DetailLine>
+          </S.DiscountBox>
+        )}
+        <S.ReviewPriceBox>
+          <p>Total</p>
+          <span>
+            R$
+            {finalPrice.toLocaleString('pt-BR', {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
+          </span>
+        </S.ReviewPriceBox>
+      </S.Footer>
+    </S.Wrapper>
+  )
+}
 
 export default CartCheckout

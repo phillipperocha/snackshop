@@ -8,10 +8,12 @@ export const Wrapper = styled.div`
 export const ListItem = styled.li`
   ${({ theme }) => css`
     display: flex;
-    gap: 15px;
+
     align-items: center;
 
-    span {
+    label {
+      display: flex;
+      gap: 15px;
       color: ${theme.colors.darkGray};
     }
   `}

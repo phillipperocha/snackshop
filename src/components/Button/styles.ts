@@ -1,7 +1,13 @@
 import styled, { css } from 'styled-components'
 
+const wrapperModifiers = {
+  disabled: () => css`
+    cursor: not-allowed;
+  `,
+}
+
 export const Wrapper = styled.button`
-  ${({ theme }) => css`
+  ${({ theme, disabled }) => css`
     background: ${theme.colors.primary};
     font-family: ${theme.font.family};
     font-size: ${theme.font.sizes.xlarge};
@@ -17,5 +23,7 @@ export const Wrapper = styled.button`
     width: 100%;
     text-transform: uppercase;
     padding: 0.8rem;
+
+    ${disabled && wrapperModifiers.disabled()}
   `}
 `

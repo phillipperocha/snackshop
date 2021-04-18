@@ -1,7 +1,15 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.div`
-  ${({ theme }) => css`
+type WrapperProps = { isDisabled?: boolean }
+
+const wrapperModifiers = {
+  disabled: () => css`
+    cursor: not-allowed;
+  `,
+}
+
+export const Wrapper = styled.div<WrapperProps>`
+  ${({ theme, isDisabled }) => css`
     .container {
       width: 2.1rem;
       height: 2.1rem;
@@ -13,6 +21,7 @@ export const Wrapper = styled.div`
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+      ${isDisabled && wrapperModifiers.disabled()}
     }
 
     .container input {
@@ -21,6 +30,7 @@ export const Wrapper = styled.div`
       cursor: pointer;
       height: 0;
       width: 0;
+      ${isDisabled && wrapperModifiers.disabled()}
     }
 
     .checkmark {
