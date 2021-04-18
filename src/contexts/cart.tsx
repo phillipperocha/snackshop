@@ -11,6 +11,7 @@ type CartContextData = {
   pricePerHundred: number
   discount: number
   finalPrice: number
+  loading: boolean
   addItem: (item: ItemData) => boolean
   removeItem: (item: ItemData) => boolean
 }
@@ -31,6 +32,7 @@ export const CartProvider: React.FC = ({ children }) => {
     { name: 'Torta de Frango' },
   ]
 
+  const [loading, setLoading] = useState(true)
   const [amountEachItem, setAmountEachItem] = useState(totalQuantity)
   const [cartItems, setCartItems] = useState<ItemData[]>([])
   const [discount, setDiscount] = useState(0)
@@ -55,16 +57,33 @@ export const CartProvider: React.FC = ({ children }) => {
   }
 
   useEffect(() => {
-    const hasDiscount = cartItems.some(
-      (item: ItemData) => item.name === 'Coxinha'
-    )
-    const discountPrice = hasDiscount ? pricePerHundred * 0.1 : 0
-    setDiscount(hasDiscount ? pricePerHundred * 0.1 : 0)
-    setFinalPrice(
-      hasDiscount ? pricePerHundred - discountPrice : pricePerHundred
-    )
-    setAmountEachItem(100 / cartItems.length)
-  }, [cartItems])
+    try {
+      if (loading) {
+        setLoading(false)
+        const jsonCartItems = JSON.parse(
+          localStorage.getItem('cartItems') as string
+        ) as ItemData[]
+        setCartItems(jsonCartItems)
+      } else {
+        const jsonCartItems = JSON.stringify(cartItems)
+        localStorage.setItem('cartItems', jsonCartItems)
+      }
+    } catch {
+      /* Stringify errors could cause fatal errors */
+    }
+
+    if (!loading) {
+      const hasDiscount = cartItems.some(
+        (item: ItemData) => item.name === 'Coxinha'
+      )
+      const discountPrice = hasDiscount ? pricePerHundred * 0.1 : 0
+      setDiscount(hasDiscount ? pricePerHundred * 0.1 : 0)
+      setFinalPrice(
+        hasDiscount ? pricePerHundred - discountPrice : pricePerHundred
+      )
+      setAmountEachItem(100 / cartItems.length)
+    }
+  }, [cartItems, loading])
 
   return (
     <CartContext.Provider
@@ -77,6 +96,7 @@ export const CartProvider: React.FC = ({ children }) => {
         finalPrice,
         addItem,
         removeItem,
+        loading,
       }}
     >
       {children}

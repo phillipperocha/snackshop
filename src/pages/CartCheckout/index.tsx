@@ -4,7 +4,8 @@ import Header from 'components/Header'
 import ItemList from 'components/ItemList'
 
 import { CartContext } from 'contexts/cart'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { useHistory } from 'react-router'
 
 const CartCheckout = () => {
   const {
@@ -13,9 +14,24 @@ const CartCheckout = () => {
     discount,
     pricePerHundred,
     finalPrice,
+    loading: cartLoading,
   } = useContext(CartContext)
 
-  return (
+  const [loading, setLoading] = useState(true)
+  const router = useHistory()
+
+  useEffect(() => {
+    if (!cartLoading) {
+      if (![1, 2, 4].includes(cartItems.length)) {
+        setLoading(true)
+        router.push('/')
+      } else {
+        setLoading(false)
+      }
+    }
+  }, [cartItems.length, router, cartLoading])
+
+  return loading ? null : (
     <S.Wrapper>
       <div>
         <Header returnHref="/">Carrinho</Header>
