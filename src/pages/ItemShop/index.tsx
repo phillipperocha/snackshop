@@ -32,7 +32,7 @@ const ItemShop = () => {
     <S.Wrapper>
       <div>
         <Header
-          bannerImage="/img/coxinha.png"
+          bannerImage="/assets/img/coxinha.png"
           bannerText={
             <>
               ESCOLHEU <strong>COXINHA</strong> GANHOU DESCONTO DE{' '}

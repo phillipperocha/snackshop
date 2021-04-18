@@ -12,7 +12,7 @@ export const Wrapper = styled.div<WrapperProps>`
 export const Banner = styled.div`
   ${({ theme }) => css`
     display: flex;
-    background-image: url('/img/bannerBackground.svg');
+    background-image: url('/assets/img/bannerBackground.svg');
     background-size: cover;
     align-items: center;
     padding: 0 ${theme.spacings.xsmall};

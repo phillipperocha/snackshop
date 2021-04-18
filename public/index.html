@@ -6,9 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#ff0000" />
     <title>Snack Shop</title>
+    <style>
+      .loader {
+        border: 1vmin solid #f3f3f3;
+        border-top: 1vmin solid #FF0000;
+        border-radius: 50%;
+        width: 20vmin;
+        height: 20vmin;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0%  { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+      }
+      </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div class="loader-container">
+      <div class="loader"></div>
+   </div>
   </body>
 </html>

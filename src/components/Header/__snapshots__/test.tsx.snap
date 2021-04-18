@@ -56,7 +56,7 @@ exports[`<Header /> should render the header with banner 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background-image: url('/img/bannerBackground.svg');
+  background-image: url('/assets/img/bannerBackground.svg');
   background-size: cover;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -120,7 +120,7 @@ exports[`<Header /> should render the header with banner 1`] = `
     >
       <img
         alt="Imagem de coxinhas"
-        src="/img/coxinha.png"
+        src="/assets/img/coxinha.png"
       />
     </div>
     <span>

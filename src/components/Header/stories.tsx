@@ -35,7 +35,7 @@ WithBanner.args = {
       NO SEU CENTO DE SALGADOS
     </>
   ),
-  bannerImage: '/img/coxinha.png',
+  bannerImage: '/assets/img/coxinha.png',
 }
 
 export const WithIcon: Story = ({ children, ...args }) => (

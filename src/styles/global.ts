@@ -6,8 +6,8 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
     font-weight: 400;
     src: local('Roboto Regular'),
-        url('/fonts/roboto-v27-latin-regular.woff2') format('woff2'),
-        url('/fonts/roboto-v27-latin-regular.woff') format('woff');
+        url('/assets/fonts/roboto-v27-latin-regular.woff2') format('woff2'),
+        url('/assets/fonts/roboto-v27-latin-regular.woff') format('woff');
   }
 
   @font-face {
@@ -15,8 +15,8 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
     font-weight: 700;
     src: local('Roboto Bold'),
-        url('/fonts/roboto-v27-latin-700.woff2') format('woff2'),
-        url('/fonts/roboto-v27-latin-700.woff') format('woff');
+        url('/assets/fonts/roboto-v27-latin-700.woff2') format('woff2'),
+        url('/assets/fonts/roboto-v27-latin-700.woff') format('woff');
   }
 
   @font-face {
@@ -24,8 +24,8 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
     font-weight: 900;
     src: local('Roboto Black'),
-        url('/fonts/roboto-v27-latin-900.woff2') format('woff2'),
-        url('/fonts/roboto-v27-latin-900.woff') format('woff');
+        url('/assets/fonts/roboto-v27-latin-900.woff2') format('woff2'),
+        url('/assets/fonts/roboto-v27-latin-900.woff') format('woff');
   }
 
   @font-face {
@@ -33,8 +33,8 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
     font-weight: 400;
     src: local(''),
-        url('/fonts/open-sans-v18-latin-regular.woff2') format('woff2'),
-        url('/fonts/open-sans-v18-latin-regular.woff') format('woff');
+        url('/assets/fonts/open-sans-v18-latin-regular.woff2') format('woff2'),
+        url('/assets/fonts/open-sans-v18-latin-regular.woff') format('woff');
   }
 
   @font-face {
@@ -42,8 +42,8 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
     font-weight: 700;
     src: local(''),
-        url('/fonts/open-sans-v18-latin-700.woff2') format('woff2'),
-        url('/fonts/open-sans-v18-latin-700.woff') format('woff');
+        url('/assets/fonts/open-sans-v18-latin-700.woff2') format('woff2'),
+        url('/assets/fonts/open-sans-v18-latin-700.woff') format('woff');
   }
 
   * {

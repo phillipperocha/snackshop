@@ -34,7 +34,7 @@ describe('<Header />', () => {
     const props = {
       children: 'Monte seu cento de salgado (1, 2 ou 4 opções)',
       bannerText: 'Promoção de coxinha',
-      bannerImage: '/img/coxinha.png',
+      bannerImage: '/assets/img/coxinha.png',
     }
 
     const { container } = renderWithTheme(<Header {...props} />)
@@ -54,7 +54,7 @@ describe('<Header />', () => {
 
     expect(bannerText.parentElement).toHaveStyle({
       display: 'flex',
-      'background-image': 'url(/img/bannerBackground.svg)',
+      'background-image': 'url(/assets/img/bannerBackground.svg)',
       'background-size': 'cover',
       'min-height': '10.6rem',
     })
