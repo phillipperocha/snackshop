@@ -14,6 +14,6 @@ export const Default: Story = (args) => (
     <li>Coxinha</li>
     <li>Pastel de carne</li>
     <li>Pastel de queijo</li>
-    <li>Pastel de esfirra</li>
+    <li>Esfirra</li>
   </ItemList>
 )

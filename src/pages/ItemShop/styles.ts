@@ -1,8 +1,20 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.div`
   position: relative;
   min-height: 100vh;
+`
+
+export const ListItem = styled.li`
+  ${({ theme }) => css`
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    span {
+      color: ${theme.colors.darkGray};
+    }
+  `}
 `
 
 export const Footer = styled.div`

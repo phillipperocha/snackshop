@@ -3,10 +3,10 @@ import styled, { css } from 'styled-components'
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     .container {
+      width: 2.1rem;
+      height: 2.1rem;
       display: block;
       position: relative;
-      padding-left: 35px;
-      margin-bottom: 12px;
       cursor: pointer;
       font-size: 22px;
       -webkit-user-select: none;

@@ -1,4 +1,5 @@
 import Button from 'components/Button'
+import Checkbox from 'components/Checkbox'
 import Header from 'components/Header'
 import ItemList from 'components/ItemList'
 import * as S from './styles'
@@ -18,10 +19,34 @@ const ItemShop = () => (
     </Header>
 
     <ItemList>
-      <li>Coxinha</li>
-      <li>Pastel de carne</li>
-      <li>Pastel de queijo</li>
-      <li>Pastel de esfirra</li>
+      <S.ListItem>
+        <Checkbox />
+        <span>Coxinha</span>
+      </S.ListItem>
+      <S.ListItem>
+        <Checkbox />
+        <span>Pastel de carne</span>
+      </S.ListItem>
+      <S.ListItem>
+        <Checkbox />
+        <span>Pastel de queijo</span>
+      </S.ListItem>
+      <S.ListItem>
+        <Checkbox />
+        <span>Esfirra</span>
+      </S.ListItem>
+      <S.ListItem>
+        <Checkbox />
+        <span>Canudinho</span>
+      </S.ListItem>
+      <S.ListItem>
+        <Checkbox />
+        <span>Empada</span>
+      </S.ListItem>
+      <S.ListItem>
+        <Checkbox />
+        <span>Torta de Frango</span>
+      </S.ListItem>
     </ItemList>
 
     <S.Footer>
