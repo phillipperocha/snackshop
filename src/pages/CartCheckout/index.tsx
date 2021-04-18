@@ -1,11 +1,12 @@
+import { useContext, useEffect, useState } from 'react'
+import { useHistory } from 'react-router'
+
 import * as S from './styles'
+import { CartContext } from 'contexts/cart'
 
 import Header from 'components/Header'
 import ItemList from 'components/ItemList'
-
-import { CartContext } from 'contexts/cart'
-import { useContext, useEffect, useState } from 'react'
-import { useHistory } from 'react-router'
+import { DetailLine, ReviewPriceBox } from './components'
 
 const CartCheckout = () => {
   const {
@@ -51,38 +52,11 @@ const CartCheckout = () => {
       <S.Footer>
         {!!discount && (
           <S.DiscountBox>
-            <S.DetailLine>
-              Subtotal
-              <span>
-                R$
-                {pricePerHundred.toLocaleString('pt-BR', {
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2,
-                })}
-              </span>
-            </S.DetailLine>
-            <S.DetailLine>
-              Desconto
-              <span>
-                R$
-                {discount.toLocaleString('pt-BR', {
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2,
-                })}
-              </span>
-            </S.DetailLine>
+            <DetailLine title="Subtotal" price={pricePerHundred} />
+            <DetailLine title="Desconto" price={discount} />
           </S.DiscountBox>
         )}
-        <S.ReviewPriceBox>
-          <p>Total</p>
-          <span>
-            R$
-            {finalPrice.toLocaleString('pt-BR', {
-              minimumFractionDigits: 2,
-              maximumFractionDigits: 2,
-            })}
-          </span>
-        </S.ReviewPriceBox>
+        <ReviewPriceBox title="Total" price={finalPrice} />
       </S.Footer>
     </S.Wrapper>
   )

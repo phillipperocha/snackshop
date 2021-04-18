@@ -63,7 +63,7 @@ export const CartProvider: React.FC = ({ children }) => {
         const jsonCartItems = JSON.parse(
           localStorage.getItem('cartItems') as string
         ) as ItemData[]
-        setCartItems(jsonCartItems)
+        setCartItems(jsonCartItems ? jsonCartItems : [])
       } else {
         const jsonCartItems = JSON.stringify(cartItems)
         localStorage.setItem('cartItems', jsonCartItems)
