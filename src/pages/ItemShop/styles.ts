@@ -1,7 +1,9 @@
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.div`
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
 `
 
@@ -19,9 +21,10 @@ export const ListItem = styled.li`
   `}
 `
 
-export const Footer = styled.div`
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  padding: 22px 23px;
+export const Footer = styled.footer`
+  ${({ theme }) => css`
+    width: 100%;
+    padding: 22px 23px;
+    padding-top: ${theme.spacings.medium};
+  `}
 `

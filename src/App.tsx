@@ -5,7 +5,7 @@ import Routes from './router'
 import GlobalStyles from 'styles/global'
 import theme from 'styles/theme'
 
-import { CartProvider } from 'hooks/cart'
+import { CartProvider } from 'contexts/cart'
 
 const App = () => (
   <Router>

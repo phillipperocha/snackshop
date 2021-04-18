@@ -3,7 +3,7 @@ import * as S from './styles'
 import Header from 'components/Header'
 import ItemList from 'components/ItemList'
 
-import { CartContext } from 'hooks/cart'
+import { CartContext } from 'contexts/cart'
 import { useContext } from 'react'
 
 const CartCheckout = () => {
@@ -17,18 +17,21 @@ const CartCheckout = () => {
 
   return (
     <S.Wrapper>
-      <Header returnHref="/">Carrinho</Header>
+      <div>
+        <Header returnHref="/">Carrinho</Header>
 
-      <S.ListTitle>Resumo do Cento de Salgado</S.ListTitle>
-      <ItemList>
-        {cartItems.map(({ name }) => (
-          <S.ListItem key={name}>
-            <span className="product">{name}</span>
-            <span className="quantity">{amountEachItem}und</span>
-          </S.ListItem>
-        ))}
-      </ItemList>
-
+        <main>
+          <S.ListTitle>Resumo do Cento de Salgado</S.ListTitle>
+          <ItemList>
+            {cartItems.map(({ name }) => (
+              <S.ListItem key={name}>
+                <span className="product">{name}</span>
+                <span className="quantity">{amountEachItem}und</span>
+              </S.ListItem>
+            ))}
+          </ItemList>
+        </main>
+      </div>
       <S.Footer>
         {!!discount && (
           <S.DiscountBox>

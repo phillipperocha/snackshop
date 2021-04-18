@@ -1,7 +1,9 @@
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.div`
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
 `
 
@@ -32,11 +34,12 @@ export const ListItem = styled.li`
   `}
 `
 
-export const Footer = styled.div`
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  font-family: 'Segoe UI', 'Open Sans';
+export const Footer = styled.footer`
+  ${({ theme }) => css`
+    width: 100%;
+    font-family: 'Segoe UI', 'Open Sans';
+    padding-top: ${theme.spacings.medium};
+  `}
 `
 
 export const DiscountBox = styled.div`
