@@ -6,9 +6,9 @@ The project was made with **Typescript** a programming language that is like **J
 
 
 
-**Frontend Application**: http://iachallenge.phillrocha.com/
+**Frontend Application**: https://iachallenge.phillrocha.com/
 
-**Storybook**: http://sb.iachallenge.phillrocha.com/
+**Storybook**: https://sb.iachallenge.phillrocha.com/
 
 
 
@@ -21,10 +21,25 @@ The project was made with **Typescript** a programming language that is like **J
 * **Styled-components** as our CSS in JS.
 * **Plop** to help automatize the components creation. We made templates for that run. Run with `yarn generate ComponentName` and it will generate.
 * **Jest** as our test framework.
+* **Docker** to make everything runs in your machine like in mine, makes easy to setup your environment.
 
 
 
 ## Dev Setup
+
+### Docker environment setup
+
+You need to have **docker** and **docker-compose**.
+
+```shell
+docker-compose up
+```
+
+After that just check your application in the respective port!
+
+**Client**: http://localhost:3000
+
+**Storybook**: [http://localhost:6006](http://localhost:6006)
 
 ### Regular environment setup
 
@@ -41,6 +56,9 @@ npm run start
 
 # Run Storybook
 npm run storybook
+
+# Or Running both
+make dev
 ```
 
 **Yarn:**
@@ -54,6 +72,9 @@ yarn start
 
 # Run Storybook - Port 6006
 yarn storybook
+
+# Or Running both
+make dev
 ```
 
 After that you can access your application on the respective port!
