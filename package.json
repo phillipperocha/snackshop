@@ -26,18 +26,8 @@
     "lint": "eslint src --max-warnings=0",
     "generate": "yarn plop --plopfile ./generators/plopfile.js",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*": [
-      "yarn lint --fix",
-      "yarn test --findRelatedTests --bail"
-    ]
+    "build-storybook": "build-storybook -s public",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -93,10 +83,9 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^6.0.0",
     "jest-styled-components": "^7.0.3",
-    "lint-staged": "^10.5.4",
     "plop": "^2.7.4",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "husky": "^6.0.0"
   }
 }
